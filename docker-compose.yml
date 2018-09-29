@@ -1,0 +1,24 @@
+# 需要事先创建网络 docker network create dlink-ops
+# docker network ls
+
+version: '3'
+services:
+  config-server:
+    image: wangyt/gs-spring-boot
+    deploy:
+      resources:
+        limits:
+          memory: 999M
+    depends_on:
+      - eureka-server
+    # TODO
+
+    ./wait-for-it.sh www.baidu.com:80 --timeout=1 --strict -- echo "baidu is up."
+    command: ["./wait-for-it.sh", "eureka-server:7777", "--", "python", "app.py"
+
+    command: ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+    ports:
+      - 7766:7766
+    environment:
+    # 注意config-server的profile不能写成其他的
+      - SPRING_PROFILES_ACTIVE=native
