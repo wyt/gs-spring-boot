@@ -1,0 +1,20 @@
+# 需要事先创建网络 docker network create dlink-ops
+# docker network ls
+
+version: '3'
+services:
+  config-server:
+    image: wangyt/gs-spring-boot
+    deploy:
+      resources:
+        limits:
+          memory: 999M
+    entrypoint:
+      - ./wait-for-it.sh
+      - www.baidu.com:80
+      - --timeout=1
+      - --strict
+      - --
+      - /startup.sh
+    ports:
+      - 4002:80
