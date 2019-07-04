@@ -27,3 +27,5 @@ redis:
 
 logging:
   path: /applogs
+  level:
+   root: INFO
