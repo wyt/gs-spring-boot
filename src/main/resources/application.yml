@@ -16,7 +16,7 @@ spring:
     # driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     locations:
-     - classpath:db/migration
+     - classpath: db/migration
     baseline-version: 1
 
 redis:
