@@ -6,13 +6,14 @@ spring:
     name: gs-spring-boot
 
   datasource:
+    # 新版本驱动需要加入serverTimezone=UTC
     url: jdbc:mysql://localhost:3306/${spring.application.name}?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     username: root
     password: 123456
     # Loading class `com.mysql.jdbc.Driver'. This is deprecated.
     # The new driver class is `com.mysql.cj.jdbc.Driver'.
     # The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
-    # driver-class-name: com.mysql.jdbc.Driver
+    # driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     locations:
      - classpath:db/migration
