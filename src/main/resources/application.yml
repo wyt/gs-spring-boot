@@ -16,8 +16,12 @@ spring:
     # driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     locations:
-     - classpath: db/migration
+     classpath:
+      - db/migration
     baseline-version: 1
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
 
 redis:
   host: 127.0.0.1

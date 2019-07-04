@@ -27,11 +27,11 @@ public class FooApplication implements CommandLineRunner {
     }
   }
 
-  @Autowired
-  private EmpMapper empMapper;
+  @Autowired private EmpMapper empMapper;
 
   @Override
   public void run(String... args) throws Exception {
     Emp emp = empMapper.selectEmp(7369);
+    System.out.println("Hello, " + emp.getEname() + " !");
   }
 }
