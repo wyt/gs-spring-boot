@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.ValueOperations;
 import java.util.List;
 import java.util.Random;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class SampleRedisApplication implements CommandLineRunner {
 
   @Autowired private StringRedisTemplate stringRedisTemplate;
