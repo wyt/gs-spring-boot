@@ -4,8 +4,8 @@ spring:
   application:
     name: gs-spring-boot
 
-  redis:
-    host: 127.0.0.1
-    database: 2
-    password:
-    port: 6379
+redis:
+  host: 127.0.0.1
+  database: 2
+  password:
+  port: 6379
