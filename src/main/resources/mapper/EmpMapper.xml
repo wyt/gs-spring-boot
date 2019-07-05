@@ -10,6 +10,11 @@
         select * from Emp where empno = #{empno}
     </select>
 
+    <select id="findByColumn"
+            resultType="samples.domain.Emp">
+        select * from Emp where ${column} = #{value}
+    </select>
+
     <insert id="saveEmp"
             useGeneratedKeys="true"
             keyProperty="empno"

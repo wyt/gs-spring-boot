@@ -1,6 +1,5 @@
 package samples.mapper;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -25,6 +24,13 @@ public class EmpMapperTests {
   public void selectEmpTest() {
     Emp emp = empMapper.selectEmp(7369);
     Assertions.assertEquals("SMITH", emp.getEname());
+  }
+
+  @DisplayName("查询一个Emp,By动态指定列")
+  @Test
+  public void findByColumnTest() {
+    Emp emp = empMapper.findByColumn("ename", "SMITH");
+    Assertions.assertEquals(7369, emp.getEmpno());
   }
 
   @DisplayName("插入一个Emp")
