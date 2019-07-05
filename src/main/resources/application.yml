@@ -21,7 +21,9 @@ spring:
     baseline-version: 1
 
 mybatis:
-  config-location: classpath:mybatis-config.xml
+#  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: samples.domain
 
 redis:
   host: 127.0.0.1
