@@ -5,4 +5,6 @@ import samples.domain.Emp;
 public interface EmpMapper {
 
   Emp selectEmp(int empno);
+
+  void saveEmp(Emp emp);
 }

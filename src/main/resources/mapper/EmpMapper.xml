@@ -2,8 +2,19 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="samples.mapper.EmpMapper">
-    <select id="selectEmp" resultType="samples.domain.Emp">
+
+    <select id="selectEmp"
+            resultType="samples.domain.Emp">
         select * from Emp where empno = #{empno}
     </select>
+
+    <insert id="saveEmp"
+            useGeneratedKeys="true"
+            keyProperty="empno"
+            parameterType="samples.domain.Emp">
+      insert into Emp (ename,job,mgr,hiredate,sal,comm,deptno)
+        values (#{ename},#{job},#{mgr},#{hiredate},#{sal},#{comm},#{deptno})
+    </insert>
 </mapper>
