@@ -11,6 +11,6 @@ public class FooApplicationTests {
 
   @Test
   public void contextLoads() {
-    //
+    // nothing
   }
 }

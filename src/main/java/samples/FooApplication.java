@@ -6,7 +6,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import samples.domain.Emp;
 import samples.mapper.EmpMapper;
 
 import java.util.Arrays;
@@ -27,11 +26,8 @@ public class FooApplication implements CommandLineRunner {
     }
   }
 
-  @Autowired private EmpMapper empMapper;
-
   @Override
   public void run(String... args) throws Exception {
-    Emp emp = empMapper.selectEmp(7369);
-    System.out.println("Hello, " + emp.getEname() + " !");
+    System.out.println("哥被调用了~啊哈哈哈~~~");
   }
 }
