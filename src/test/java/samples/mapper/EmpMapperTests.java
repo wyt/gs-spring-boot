@@ -38,7 +38,7 @@ public class EmpMapperTests {
   public void saveEmpTest() {
     Emp emp = new Emp();
     emp.setEname("YONGTAO");
-    emp.setJob("Programmer");
+    emp.setJob("PROGRAMMER");
     emp.setMgr(7369);
     emp.setHiredate(new Date(System.currentTimeMillis()));
     emp.setSal(new BigDecimal("52325.23"));

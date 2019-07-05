@@ -16,12 +16,12 @@ spring:
     # driver-class-name: com.mysql.cj.jdbc.Driver
   flyway:
     locations:
-     classpath:
+      classpath:
       - db/migration
     baseline-version: 1
 
 mybatis:
-#  config-location: classpath:mybatis-config.xml
+  #  config-location: classpath:mybatis-config.xml
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: samples.domain
 
@@ -34,4 +34,4 @@ redis:
 logging:
   path: /applogs
   level:
-   root: INFO
+    root: INFO
