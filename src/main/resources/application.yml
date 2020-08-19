@@ -35,3 +35,20 @@ logging:
   path: /applogs
   level:
     root: INFO
+
+ycredis:
+  nodeGroupMap:
+    node1:  #节点1
+      enabled: 1
+      nodes:
+        - 192.168.200.61:6001
+        - 192.168.200.62:6002
+        - 192.168.200.63:6001
+  applicationName: ${spring.application.name}
+  openCollectSwitch : true
+
+  reportData:
+    serviceUrl: http://192.168.87.164:9115
+    api:
+      redisApiInfo: /api/v1/upload_redis_info
+      redisApiErr: /api/v1/upload_redis_error
