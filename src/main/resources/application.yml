@@ -48,7 +48,7 @@ ycredis:
   openCollectSwitch : true
 
   reportData:
-    serviceUrl: http://192.168.87.164:9115
+    serviceUrl: http://192.168.87.106:9115
     api:
       redisApiInfo: /api/v1/upload_redis_info
       redisApiErr: /api/v1/upload_redis_error

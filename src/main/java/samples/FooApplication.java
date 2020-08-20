@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 @Slf4j
 @SpringBootApplication
-@ComponentScan(basePackages = {"samples", "com.yiche.redis.api"})
+@ComponentScan(basePackages = {"samples", "com.yiche.redis"})
 public class FooApplication implements CommandLineRunner {
 
   public static void main(String[] args) {
