@@ -35,3 +35,6 @@ logging:
   path: /applogs
   level:
     root: INFO
+
+hello:
+  msg: wangyongtao666
