@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author wangyongtao
@@ -15,8 +14,7 @@ import java.util.concurrent.TimeUnit;
 @RestController
 public class RedisTestController {
 
-  @Autowired
-  private YcRedisService ycRedisService;
+  @Autowired private YcRedisService ycRedisService;
 
   String preffix = "com.yiche.redis.sdk:key";
 
@@ -30,7 +28,11 @@ public class RedisTestController {
     rand.setSeed(System.nanoTime());
 
     for (; ; ) {
-      Object obj = ycRedisService.get(preffix + rand.nextInt(100));
+      String key = preffix + rand.nextInt(100);
+      Object obj = ycRedisService.get(key);
+      if (obj != null) {
+        System.out.println(key + "=" + obj);
+      }
     }
   }
 }
