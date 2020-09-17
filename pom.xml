@@ -9,17 +9,14 @@
     </parent>
     <groupId>gihub.wyt</groupId>
     <artifactId>gs-spring-boot</artifactId>
-    <version>2.1.6</version>
+    <version>1.1.0</version>
+
     <properties>
         <java.version>1.8</java.version>
         <docker.image.prefix>wangyt</docker.image.prefix>
     </properties>
+
     <dependencies>
-        <dependency>
-            <groupId>io.mysnippet</groupId>
-            <artifactId>mysdk-spring-boot-starter</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -83,14 +80,14 @@
                 <!-- mvn clean package dockerfile:build -->
                 <!-- 插件目标绑定maven生命周期阶段 -->
                 <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>default</id>-->
-                        <!--<phase>package</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>build</goal>-->
-                            <!--<goal>push</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
+                <!--<execution>-->
+                <!--<id>default</id>-->
+                <!--<phase>package</phase>-->
+                <!--<goals>-->
+                <!--<goal>build</goal>-->
+                <!--<goal>push</goal>-->
+                <!--</goals>-->
+                <!--</execution>-->
                 <!--</executions>-->
                 <configuration>
                     <repository>${docker.image.prefix}/${project.artifactId}</repository>
