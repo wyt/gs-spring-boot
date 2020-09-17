@@ -5,6 +5,11 @@ spring:
   application:
     name: gs-spring-boot
 
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.101.147:8848
+
   datasource:
     # 新版本驱动需要加入serverTimezone=UTC
     url: jdbc:mysql://localhost:3306/${spring.application.name}?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
@@ -17,7 +22,7 @@ spring:
   flyway:
     locations:
       classpath:
-      - db/migration
+        - db/migration
     baseline-version: 1
 
 mybatis:
