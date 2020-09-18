@@ -1,0 +1,12 @@
+server:
+  port: 8008
+
+spring:
+  application:
+    name: gs-spring-boot
+  cloud:
+    nacos:
+      config: # 配置中心
+        server-addr: 192.168.101.147:8848
+      discovery: # 服务发现
+        server-addr: 192.168.101.147:8848
